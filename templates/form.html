@@ -1,0 +1,31 @@
+<html>
+<head>
+  <meta charset="utf-8">
+<title> Patient Entry Form</title>
+</head>
+<h1>Enter Patient Info Here</h1>
+<form  method="post" action="/post_patient">
+<p>
+    <label>Medical Record Number:</label> <br>
+    <input> id="medicalRecordNum" name="medicalRecordNum" type="text" maxlength="15"/>
+</p>
+<p>
+  <label>Requester Name:</label> <br>
+  <input> id="requesterName" name="requesterName" type="text" maxlength="50" required/>
+</p>
+<p>
+  <label>Patient Name:</label> <br>
+  <input> id="patientName" name="patientName" type="text" maxlength="50" required/>
+</p>
+<p>
+  <label>Date Received:</label> <br>
+  <input> id="dateReceived" name="dateReceived" type="date"/>
+</p>
+<p>
+  <label>Comments:</label> <br>
+  <input> id="comments" name="comments" type="text" maxlength="60"/>
+
+</p>
+<p> <input type="submit" value="Enter Patient"> </p>
+</form>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+  <meta charset="utf-8">
+<title> Patient Database</title>
+</head>
+<h1>See Patient Info Here</h1>
+<form  method="post" action="{{ url_for('form') }}">
+<p>
+    {{ form.requesterName.label }}<br>
+    {{ form.requesterName(size=32) }}
+</p>
+<p>
+    {{ form.patientName.label }}<br>
+    {{ form.patientName(size=32) }}
+</p>
+<p>
+    {{ form.medicalRecordNum.label }}<br>
+    {{ form.medicalRecordNum(size=32) }}
+</p>
+<p>
+    {{ form.dateReceived.label }}<br>
+    {{ form.dateReceived(size=20) }}
+</p>
+<p>
+    {{ form.comments.label }}<br>
+    {{ form.comments(size=60) }}
+</p>
+<p> <input type="submit" value="Enter Patient"> </p>
+</form>
+</html>
