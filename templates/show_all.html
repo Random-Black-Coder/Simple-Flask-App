@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+      <h3>
+         <a href = "{{ url_for('show_all') }}">Patient - Flask example</a>
+      </h3>
+
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+
+      <h3>Patients (<a href = "{{ url_for('new') }}">Add Patient
+         </a>)</h3>
+
+      <table>
+         <thead>
+            <tr>
+               <th>Requester Name</th>
+               <th>Patient Name</th>
+               <th>Medical Record Number</th>
+               <th>Date Received</th>
+               <th>Comments</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for patient in patients %}
+               <tr>
+                  <td>{{ patient.requesterName }}</td>
+                  <td>{{ patient.patientName }}</td>
+                  <td>{{ patient.medicalRecordNumber}}</td>
+                  <td>{{ patient.dateReceived }}</td>
+                  <td>{{ patient.comments }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+   </body>
+</html>
