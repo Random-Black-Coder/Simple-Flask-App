@@ -18,12 +18,12 @@ class Patients(db.Model):
     dateReceived = db.Column(db.Date)
     comments = db.Column(db.String(60))
 
-def __init__(self, requesterName, patientName, medicalRecordNumber, dateReceived, comments):
-   self.requesterName = requesterName
-   self.patientName = patientName
-   self.medicalRecordNumber = medicalRecordNumber
-   self.dateReceived = dateReceived
-   self.comments = comments
+    def __init__(self, requesterName, patientName, medicalRecordNumber, dateReceived, comments):
+        self.requesterName = requesterName
+        self.patientName = patientName
+        self.medicalRecordNumber = medicalRecordNumber
+        self.dateReceived = dateReceived
+        self.comments = comments
 
 #homepage
 @app.route('/')
