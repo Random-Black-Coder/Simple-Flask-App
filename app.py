@@ -9,7 +9,8 @@ from flask_nav.elements import Navbar, Subgroup, View, Link, Text, Separator
 #initialize app
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'you-will-never-guess'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:root@localhost/Patients'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ulghmdxtcavxmn:89d1c941ddeaa99801a8b3e2bafe7f86e6a2d9e6ff29f00d38fb987751b01462@ec2-54-221-215-228.compute-1.amazonaws.com:5432/dc4bvr7gb74u5n'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:root@localhost/Patients'
 db = SQLAlchemy(app)
 nav = Nav(app)
 Bootstrap(app)
